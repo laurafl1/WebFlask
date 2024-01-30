@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block title %} Test {% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link href="{{ url_for('static', filename='./js/css/bootstrap.min.css') }}" rel="stylesheet">
+  <!-- Latest compiled JavaScript -->
+  <script src="{{ url_for('static', filename='./js/js/bootstrap.bundle.min.js') }}"> </script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title> GTA V </title>
+  
+</head>
+  <body>
+    <header class="cabecera"> <a href="{{ url_for('routes.index') }}"> <img class="logo" src="./static/images/Logo.png" alt="página principal"> </a> 
+      <h1 class="fonts"> GTA V </h1>
+      <p class="fonts"> Grand theft Auto V </p>
+  </header>
+<nav>
+  <ul class="menu">
+      <li class="menu"> <a href="{{ url_for('routes.index') }}"> INICIO </a></li>
+      <li class="menu"> <a href="{{ url_for('routes.personajes') }}"> PERSONAJES </a></li>            
+      <li class="menu"> <a href="{{ url_for('routes.formulario') }}"> INICIA SESIÓN </a></li>
+      <li class="menu"> <a href="{{ url_for('routes.verVideojuegos') }}"> TEST </a></li>
+      <li class="menu"> <a href="{{ url_for('routes_lenguajes.verLenguajes') }}"> LENGUAJE </a></li>
+  </ul>
+</nav>
+<br>
+    <table border="1" style="width: 100%;">
+    <tr style="text-align: center;">
+      <td style="color: white;">ID</td>
+      <td style="color: white;">NOMBRE</td>
+      <td style="color: white;">AÑO DE LANZAMIENTO</td>
+      <td style="color: white;">PLATAFORMA</td>
+      <td style="color: white;">GENERO</td>
+      <td style="color: white;">DESARROLLADORES</td>
+    </tr>
+   
+    {% for videojuego in aleatorio %}
+          
+        <tr style="text-align: center;">
+          <td style="color: white;">{{ videojuego.id }}</td> 
+          <td style="color: white;">{{ videojuego.nombre }}</td> 
+          <td style="color: white;">{{ videojuego.año_lanzamiento }}</td>
+          <td style="color: white;">{{ videojuego.plataforma }}</td>
+          <td style="color: white;">{{ videojuego.genero }}</td>
+          <td style="color: white;">{{ videojuego.desarrolladores }}</td>
+        </tr>
+       
+    {% endfor %}
+  </table>
+<br/>
+<div style="border: 1px;">
+  <form action="/addVideojuego" method="post">
+    <label for="nombre" style="color:white;"> Nombre </label>
+    <input type="text" name="nombre" id="" value="" />
+
+    <label for="año_lanzamiento" style="color:white;"> Año de Lanzamiento </label>
+    <input type="number" name="año_lanzamiento" value="" />
+
+    <label for="plataforma" style="color:white;"> Plataforma </label>
+    <input type="text" name="plataforma" value="" />
+
+    <label for="genero" style="color:white;"> Genero </label>
+    <input type="text" name="genero" value="" />
+
+    <label for="desarrolladores" style="color:white;"> Desarrolladores </label>
+    <input type="text" name="Desarrolladores" value="" />
+    <input type="submit" value="add" />
+  </form>
+</div>
+
+<br/>
+<form action="/delVideojuego" method="post">
+    <label for="nombre" style="color:white;"> Nombre </label>
+    <input type="text" name="nombre" id="" value="" />
+    <input type="submit" value="borrar" />
+</form>
+
+<br/>
+<form action="/updateVideojuego"  method="post">
+  <label
+    for="nombre" style="color:white;">ID</label>
+  <select name="id" >
+    {% for videojuego in aleatorio %}
+      <option value="{{videojuego.id}}">{{videojuego.nombre}}</option>
+    {% endfor %}
+  </select>
+
+  <label
+  for="nombre" style="color:white;">Nombre</label>
+<input type="text" name="nombre" id="" value="" />
+<label
+  for="año_lanzamiento" style="color:white;">Año de Lanzamiento</label>
+<input type="text" name="año_lanzamiento" value="" />
+
+  <input type="submit" value="update" />
+</form>
+<footer>
+  <ul id="menu2">
+    <li> Politica de privacidad </li>
+    <li> Términos de uso </li>
+    <li> Copyright  </li>
+  </ul>
+<div>
+  <a href="https://www.instagram.com/"><img class="redes" src="{{ url_for('static', filename='/images/Instagram.png') }}" alt="Instagram" /></a>
+  <a href="https://twitter.com/"> <img class="redes" src="{{ url_for('static', filename='/images/Twitter.jpg') }}" alt="Twitter"/></a>
+  <a href="https://www.facebook.com/"> <img class="redes" src="{{ url_for('static', filename='/images/Facebook.png') }}" alt="Facebook"/></a>
+</div>
+</footer>
+</body>
+</html>
+{% endblock %}

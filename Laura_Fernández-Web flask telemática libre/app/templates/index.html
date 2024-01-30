@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link href="./js/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="./js/js/bootstrap.bundle.min.js"> </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title> GTA V </title>
+</head>
+<body>
+        <header class="cabecera"> <a href="{{ url_for('routes.index') }}"> <img class="logo" src="./static/images/Logo.png" alt="página principal"> </a> 
+            <h1 class="fonts"> GTA V </h1>
+            <p class="fonts"> Grand theft Auto V </p>
+        </header>
+    <nav>
+        <ul class="menu">
+            <li class="menu"> <a href="{{ url_for('routes.index') }}"> INICIO </a></li>
+            <li class="menu"> <a href="{{ url_for('routes.personajes') }}"> PERSONAJES </a></li>            
+            <li class="menu"> <a href="{{ url_for('routes.formulario') }}"> INICIA SESIÓN </a></li>
+            <li class="menu"> <a href="{{ url_for('routes.verVideojuegos') }}"> TEST </a></li>
+        </ul>
+    </nav>
+    <br>
+    <h1 id="titulo1"> Te damos la bienvenida a Los <br> Santos </h1>
+    <p class="texto1"> Un joven estafador callejero, un ladrón de bancos retirado y un psicópata aterrador se <br>ven 
+        involucrados con lo peor y más desquiciado del mundo criminal, del gobierno de los EE. UU. y de la <br> industria 
+        del espectáculo, y tendrán que llevar a cabo una serie de peligrosos golpes para sobrevivir en una <br> ciudad 
+        implacable en la que no pueden confiar en nadie. Y mucho menos los unos en los otros. </p>
+        <br>
+    <p class="texto1"> Los jugadores actuales pueden transferir su progreso del modo Individual de GTA V y sus personajes 
+        y progresos <br> de GTA Online a PlayStation®5 y Xbox Series X|S mediante una transferencia única. </p>
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide col-sm-8 offset-2" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./static/images/Carrusel1.jpg" alt="GTA V" class="d-block" style="width:100%">
+          </div>
+          <div class="carousel-item">
+            <img src="./static/images/Carrusel2.jpg" alt="GTAV" class="d-block" style="width:100%">
+          </div>
+          <div class="carousel-item">
+            <img src="./static/images/Carrusel3.jpg" alt="GTAv" class="d-block" style="width:100%">
+          </div>
+        </div>
+        
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      <div class="row mt-4">
+    <div class="div1 offset-1 col-sm-5">
+        <h1> Ya disponibles  para <br> PlayStation®5 y Xbox Series X|S </h1>
+        <p> Disfruta de los superventas del entretenimiento Grand Theft Auto V y GTA Online. </p>
+    </div>
+    <div class="offset-1 col-sm-3">
+         <iframe src="https://www.youtube.com/embed/QkkoHAzjnUs" title="Grand Theft Auto V Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+<footer>
+  <ul id="menu2">
+    <li> Politica de privacidad </li>
+    <li> Términos de uso </li>
+    <li> Copyright  </li>
+  </ul>
+<div>
+  <a href="https://www.instagram.com/"><img class="redes" src="{{ url_for('static', filename='/images/Instagram.png') }}" alt="Instagram" /></a>
+  <a href="https://twitter.com/"> <img class="redes" src="{{ url_for('static', filename='/images/Twitter.jpg') }}" alt="Twitter"/></a>
+  <a href="https://www.facebook.com/"> <img class="redes" src="{{ url_for('static', filename='/images/Facebook.png') }}" alt="Facebook"/></a>
+</div>
+</footer>
+</body>
+</html>
+{% endblock %}
+
+{% block footer %}
+FOOTER desde Index
+{% endblock %}

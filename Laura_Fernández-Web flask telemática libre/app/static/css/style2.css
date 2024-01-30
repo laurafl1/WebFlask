@@ -1,0 +1,109 @@
+html, body, h1, h2, h3, h4, hr, ul, li, a,
+article, aside, footer, header, main, section {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #000000;
+}
+.cabecera {
+    background-color: black; /* For browsers that do not support gradients */
+    background-image: linear-gradient(#000000, #3a8816);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+.fonts {
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+footer {
+    background-color: black; /* For browsers that do not support gradients */
+    background-image: linear-gradient(#000000, #3a8816);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+  }
+h2 {
+    color: white;
+}
+.img1 {
+    width: 30px;
+}
+li a {
+    color: white;
+    text-decoration: none;
+}
+li a:hover{
+    color: red;
+    font-size: 100%;
+}
+.link {
+    margin-left: 0px;
+    margin-right: 15px;
+    font-size: 15px;
+    font-variant: small-caps;
+    font-weight: bold;
+    list-style-type: none;
+    color: white;
+    display: inline;
+}
+.logo {
+    width: 110px;
+    height: 100px;
+    float: left;
+    opacity: 0.5;
+}
+#menu {
+    margin-left: 0px;
+    margin-right: 15px;
+    font-size: 15px;
+    font-variant: small-caps;
+    font-weight: bold;
+    list-style-type: none;
+    display: inline;
+}
+#menu2 {
+    list-style-type: none;
+    color: white;
+    display: inline;
+    color: gray;
+  }
+
+nav {
+    background-color: #3a8816; 
+    background-image: linear-gradient(#000000, #3a8816);
+    padding: 10px 20px;
+    margin-top: 1px;
+}
+p {
+    padding: 0;
+    margin: 1%;
+    color: white;
+}
+.personajes {
+    width: 60px;
+    transition: transform .2s; 
+}
+.personajes:hover {
+    transform: scale(2.5); 
+}
+span {
+    font-weight: bold;
+}
+table, td{
+    border: 1px solid;
+    border-radius: 30px;
+}
+td {
+    color: white;
+}
+#texto1 {
+    font-family: 'Fuzzy Bubbles', cursive;
+    text-align: center;
+}
+ul {
+    padding: 0;
+    margin: 1%;
+}
+
+

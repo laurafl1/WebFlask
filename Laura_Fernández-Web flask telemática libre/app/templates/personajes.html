@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+    <title> GTA V </title>
+</head>
+<body>
+    <header class="cabecera"> 
+        <img class="logo" src="../static/images/Logo.png" alt="GTA V">
+        <h1 class="fonts"> GTA V </h1>
+        <p class="fonts"> Grand theft Auto V </p>
+    </header>
+<nav>
+    <ul id="menu">
+        <li class="link"> <a href="{{ url_for('routes.index') }}"> INICIO </a></li>
+        <li class="link"> <a href="{{ url_for('routes.personajes') }}"> PERSONAJES </a></li>            
+        <li class="link"> <a href="{{ url_for('routes.formulario') }}"> INICIA SESIÓN </a></li>
+        <li class="link"> <a href="{{ url_for('routes.verVideojuegos') }}"> TEST </a></li>
+    </ul>
+</nav>
+<p id="texto1"> En Grand Theft Auto V podremos manejar no a uno ni a dos, sino hasta a 3 personajes y de forma simultánea. Se trata 
+    de Franklin, <br> Michael y Trevor. Aunque cada uno de ellos tengan vidas totalmente distintas, sabrán crear una <br> nueva 
+    en conjunto por la ciudad de Los Santos y El Condado de Blaine.
+</p>
+<br>
+<h2> Protagonistas </h2>
+<table>
+    <tr>
+        
+        <td> <img class="personajes" src="../static/images/Michael.png" alt="Michael"> </td>
+        <td> <span> Michael de Santa </span> <br> Es un ladrón de bancos veterano y un experto con los conocimientos que solo se adquieren tras años como 
+            delincuente <br> profesional exitoso. Ahora, retirado y cómodamente instalado en una especie de programa de 
+            protección de testigos <br> extraoficial, Michael debe enfrentarse a sus propios problemas: una mujer que no puede 
+            dejar de gastar dinero <br> y dos hijos malcriados a los que no entiende en absoluto. Michael salió de la mala vida 
+            y <br> consiguió todo lo que quería, pero sigue siendo infeliz. </td>
+    </tr>
+    <tr>
+        <td> <img class="personajes" src="../static/images/Franklin.PNG" alt="Franklin"> </td>
+        <td> <span> Franklin Clinton </span> <br> antiguo pandillero en busca de buenas oportunidades de ganar dinero, trabaja como embargador para 
+            un  armenio con <br> una agencia de coches de lujo que se dedica a estafar a jóvenes nuevos ricos, vendiéndoles 
+            coches caros que <br> no pueden permitirse. Cuando dejan de cumplir con sus pagos y no quieren devolver  sus 
+            coches, <br> Franklin se encarga de recuperarlos.</td>
+    </tr>
+    <tr>
+        <td> <img class="personajes" src="../static/images/Trevor.PNG" alt="Trevor"></td>
+        <td> <span> Trevor Philips </span> <br> Nacido en la zona fronteriza de Estados Unidos y Canadá. A Trevor no le 
+            interesa vivir según las reglas de nadie. Es un  consumidor <br> habitual de drogas, extremadamente volátil y 
+            propenso a sufrir ataques de destrucción y  violencia. Fue <br> compañero delictivo de Michael hace años. 
+            Cuanto menos se diga de él, mejor.</td>
+    </tr>
+</table>
+<footer>
+    <ul id="menu2">
+      <li> Politica de privacidad </li>
+      <li> Términos de uso </li>
+      <li> Copyright  </li>
+    </ul>
+  <div>
+    <a href="https://www.instagram.com/"> <img class="img1" src="{{ url_for('static', filename='/images/Instagram.png') }}" alt="Instagram"/></a>
+    <a href="https://twitter.com/?lang=es"> <img class="img1" src="{{ url_for('static', filename='/images/Twitter.jpg') }}" alt="Twitter"/></a>
+    <a href="https://www.facebook.com/"> <img class="img1" src="{{ url_for('static', filename='/images/Facebook.png') }}" alt="Facebook"/></a>
+  </div>
+  </footer>
+</body>
+</html>
